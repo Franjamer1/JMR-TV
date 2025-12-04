@@ -1,0 +1,339 @@
+:root {
+    --celeste: rgb(112, 103, 161);
+    --rosa: rgb(233, 143, 177);
+    --blanco: rgba(250, 248, 250, 1);
+    --morado1: rgba(134, 115, 154, 1);
+    --morado2: rgba(159, 132, 162, 1);
+    --morado3: rgba(180, 177, 208, 1);
+    --morado4: rgba(161, 154, 192, 1);
+    --lila: rgba(186, 147, 186, 1);
+    --celesteA: rgba(188, 220, 236, 1);
+}
+
+body {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.877), rgb(76, 24, 131)), url('../assets/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    height: 15vh;
+    background-color: var(--celeste);
+    background: linear-gradient(to top, rgb(76, 24, 131) 0%, transparent 100%);
+    opacity: 89%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.75)
+}
+
+#logo_title {
+    color: cornsilk;
+    display: flex;
+    gap: 1rem;
+    width: 50%;
+}
+
+#logo:hover {
+    transform: scale(1.008);
+    transition: 100ms;
+}
+
+h1:hover {
+    transform: scale(1.008);
+    transition: 100ms;
+}
+
+header h1 {
+    /* display: none; */
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.452);
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 45px;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    justify-content: end;
+    gap: 1.5rem;
+    position: absolute;
+    top: 85px;
+    right: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#logo {
+    height: 64px;
+    width: 64px;
+}
+
+
+
+
+
+
+/* CSS */
+nav a,
+nav a:after {
+    width: 150px;
+    height: 76px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #e98fb1 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+@media (max-width: 960px) {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        right: 3px;
+        top: 100px;
+    }
+
+    nav a,
+    nav a:after {
+        display: flex;
+        flex-direction: column;
+        top: -90px;
+        width: 100px;
+        height: 25px;
+        line-height: 15px;
+        font-size: 12px;
+        box-shadow: 4px 0px 0px #00E6F6;
+    }
+}
+
+
+a[href="#"] {
+    background: linear-gradient(45deg, transparent 5%, #c23a6e 5%);
+    text-decoration: none;
+}
+
+nav a:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'ALTERNATE TEXT';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #e98fb1 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+}
+
+nav a:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+@media (min-width: 990px) {
+
+    nav a,
+    nav a:after {
+        width: 200px;
+        height: 86px;
+        line-height: 88px;
+    }
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+    width: 100%;
+}
+
+
+
+.sectionFilms {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#h2 {
+    width: 100%;
+    text-align: center;
+    margin: 5rem 0 1rem 0;
+    font-size: 50px;
+    color: var(--blanco);
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 40px;
+    font-style: normal;
+}
+
+#cardContainer {
+    display: flex;
+    gap: 2rem;
+    overflow: break-word;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#card {
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.438);
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-bottom: 3rem;
+}
+
+/* #card:hover {
+    filter: grayscale(90%) brightness(70%);
+} */
+
+#div_p {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: var(--celeste);
+    opacity: 89%;
+}
+
+
+#info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.507);
+    z-index: -1;
+}
+
+#card:hover #info::before {
+    background-color: rgba(21, 11, 32, 0.781);
+}
+
+
+/*contact*/
+.form-control {
+    background-color: #2e144d;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #8356ec;
+}
+
+.form-group label {
+    color: white;
+}
+
+.btn-custom {
+    background-color: #421497;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #a985eb;
+}
