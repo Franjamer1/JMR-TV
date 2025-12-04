@@ -5,8 +5,7 @@ const dbCon = async () => {
     //realizo la conexion con la BDD
     await mongoose.connect(process.env.MONGO_URI);
     console.log("Conexion a la base de datos exitosa");
-    console.log(process.env.MONGO_URI);
-}
+};
 
 module.exports = dbCon;
 
