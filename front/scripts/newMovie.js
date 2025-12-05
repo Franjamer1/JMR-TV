@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('jmr-tv-production.up.railway.app/movies', {
+            const response = await fetch('https://jmr-tv-production.up.railway.app/movies', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -3,7 +3,7 @@ const axios = require("axios");
 
 function fetchData() {
 
-    axios.get("jmr-tv-production.up.railway.app/movies")
+    axios.get("https://jmr-tv-production.up.railway.app/movies")
         .then(response => {
             response.data.forEach(movie => {
                 createCard(movie);
